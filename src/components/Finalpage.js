@@ -1,11 +1,10 @@
 import React from 'react'
 import './finelPage.css';
-import { Link} from 'react-router-dom';
+import { useLocation  , Link} from 'react-router-dom';
 
 
 function Finalpage() {
-
-  
+   
     return (
         <div>
             <div className="navigation">
@@ -51,7 +50,7 @@ function Finalpage() {
                         </div>
                         <div className="cont-total">
                             <h2 id="cont-total-text" className="cont-total_text">Subtotal</h2>
-                            <h2 id="cont-total_rs-text" className="cont-total_rs">Rs.0000 </h2>
+                            <h2 id="cont-total_rs-text" className="cont-total_rs">Rs.000 </h2>
                         </div>
                         <div className="final-service1">
                             <h2 id="final-service1-text-one" className="final-service1_text" />
@@ -61,7 +60,7 @@ function Finalpage() {
                         </div>
                         <div className="final-price">
                             <h1 id="final-price_final" className="final-price_text">Total</h1>
-                            <h1 id="final-price_rs_final" className="final-price_rs">Rs.0000</h1>
+                            <h1 id="final-price_rs_final" className="final-price_rs">Rs 000</h1>
                         </div>
                     </div></section>
             </section>

@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from 'react'
+import React , {useState , useEffect , useRef} from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
@@ -33,9 +33,16 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 function Index() {
 
+    const [open, setOpen] = React.useState(false);
     const [url , setUrl] = React.useState('https//www.facebook.com/xyz/afjjjfjfj')
+   
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
-  
 
     const speakersData = [
         {
@@ -67,6 +74,33 @@ function Index() {
 
       const [cssLoaded, setCssLoaded] = useState(false);
 
+      const aboutRef = useRef(null);
+      const speakerRef = useRef(null);
+      const sceduleRef = useRef(null);
+      const spnserRef = useRef(null);
+
+    
+     
+    
+      const handleScrollToAbout = () => {
+        aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+      };
+    
+      const handleScrollToSpeaker = () => {
+        speakerRef.current.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      const handleScrollToscedule=()=>{
+        sceduleRef.current.scrollIntoView({ behavior: 'smooth' });
+
+      }
+
+      const handleScrollTosponser=()=>{
+        spnserRef.current.scrollIntoView({ behavior: 'smooth' });
+
+      }
+    
+
       // useEffect(() => {
         
       //     const timeout = setTimeout(() => {
@@ -88,10 +122,10 @@ function Index() {
           <ul>
             <li class="up"><NavLink class="ups" to="/">Home</NavLink></li>
             
-            <li class="up"><a href="#about">About</a></li>
-            <li class="up"><a href="#speak">Speakers</a></li>
-            <li class="up"><a href="#schedule">Schedule</a></li>
-            <li class="up"><a href="#spon">Sponsors</a></li>
+            <li class="up" onClick={handleScrollToAbout}><a     >About</a></li>
+            <li class="up"   onClick={handleScrollToSpeaker}><a   >Speakers</a></li>
+            <li class="up"  onClick={handleScrollToscedule} ><a href="#schedule">Schedule</a></li>
+            <li class="up" onClick={handleScrollTosponser}><a href="#spon">Sponsors</a></li>
             <li class="up"><a href="#infor">Info</a></li>
           </ul>
     
@@ -115,7 +149,7 @@ function Index() {
        </div>
     
     
-       <div id="about">
+       <div id="about" ref={aboutRef}>
         <br/>
         <br/>
         <br/>
@@ -137,7 +171,7 @@ function Index() {
       
    
 
-    <section id="speaker" className="speaker">
+    <section id="speaker" className="speaker" ref={speakerRef}>
     <br/>
       <br/>
       <h2 class="spk-h2 interaa">03</h2>
@@ -177,7 +211,7 @@ function Index() {
     
     
     
-    <div class="container">
+    <div class="container" ref={sceduleRef}>
       <br/>
       <br/>
       <p class="sc-head interaa">03</p>
@@ -241,7 +275,7 @@ function Index() {
     
     
     
-      <section class="sponsors" id="spon">
+      <section class="sponsors" id="spon"  ref={spnserRef}>
         <br/>
         <p class="interaa" >04</p>
         <br/>
@@ -294,7 +328,7 @@ function Index() {
     
     </div>
     {/* <script src="script.js"></script> */}
-
+  
     
     </body>
     )
