@@ -1,0 +1,278 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 175vh;
+	position: relative;
+}
+
+.header {
+	width: 100vw;
+	height: 35vh;
+	background-color: 
+	#FF005A;
+	
+}
+
+
+.logo {
+	position: absolute;
+	top: 40px;
+	left: 60px;
+}
+
+.header .logo img {
+	width: 60px;
+	height: 87px;
+}
+
+
+.home-nav {
+	position: absolute;
+	top: 40px;
+	left: 60px;
+	display: flex;
+	justify-content: space-between;
+	width: 500px;
+	margin-left: 20rem;
+	margin-top: 35px;
+}
+
+.home-nav a {
+	text-decoration: none;
+	font-family: Inter;
+	font-weight: 200;
+	font-size: smaller;
+	color: #ffffff;
+}
+
+.home.nav a:hover {
+	color: 
+	#FF005A;
+}
+
+
+.title-location p {
+	position: absolute;
+}
+
+.title-location p:first-child {
+	color: #FFF;
+	font-family: Khand;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-left: 33rem;
+	margin-top: 8.5rem;
+}
+
+.title-location p:last-child {
+	color: #000;
+	font-family: Inter;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 28.8px;
+	letter-spacing: 0.3px;
+	margin-top: 10.5rem;
+	margin-left: 31rem;
+}
+
+.body {
+	position: relative;
+	margin-left: 13rem;
+	width: 65vw;
+	height: 100vh;
+}
+
+.ticket-container {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.container-ticket {
+	border-bottom: 1px solid #ccc;
+	padding: 10px;
+}
+
+.ticket-header {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 10px;
+}
+
+.ticket-header h2 {
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.ticket-container p {
+	color: #333;
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19.6px;
+}
+
+.price {
+	margin-left: 34rem;
+	margin-top: .2rem;
+}
+
+.number-of-tickets {
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+select {
+	position: absolute;
+	margin-left: 47rem;
+	border: 1px solid #767676;
+	background: #EFEFEF;
+}
+
+.silver {
+	padding-top: 25px;
+}
+
+
+.multiply {
+	position: absolute;
+	color: #000;
+	margin-left: 46rem;
+	font-family: Inter;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.gold1 p {
+	width: 19rem;
+}
+
+.gold1 h2 {
+	white-space: nowrap;
+}
+
+.diamond h2 {
+	white-space: nowrap;
+}
+
+.diamond p {
+	width: 19rem;
+}
+
+.fanpit .price {
+	margin-left: 33.3rem;
+}
+
+.gold1 .price {
+	margin-left: 15.5rem;
+}
+
+.diamond .price {
+	margin-left: 19.7rem;
+}
+
+.total span {
+	color: #000;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 600;
+	position: absolute;
+	margin-top: 1rem;
+}
+
+.final-price {
+	margin-left: 43rem;
+	white-space: nowrap;
+}
+
+.checkout-btn a.disabled {
+	position: absolute;
+	margin-top: 4rem;
+	margin-left: 41rem;
+	padding: 5px 50px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 100px;
+	border: 2px solid grey;
+	color: #ffffff;
+	background-color: grey;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.checkout-btn a {
+	background-color: #ffffff;
+	position: absolute;
+	margin-top: 4rem;
+	margin-left: 41rem;
+	padding: 5px 50px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 100px;
+	border: 2px solid #008000;
+	color: #000000;
+}
+
+
+.last-bar{
+  background-color: 
+  #FF005A;
+  width: 100vw;
+  height: 8vh;
+  margin-top: 8rem;
+}
+
+
+.wrapper .footer {
+	width: 100vw;
+	height: 10vh;
+	background: #ffffff;
+	position: relative;
+}
+
+.footer-items {
+	display: flex;
+	position: absolute;
+}
+
+.social-bar {
+	position: absolute;
+	margin-top: 1.3rem;
+	margin-left: 10rem;
+}
+
+.social-bar img {
+	height: 25px;
+	width: 25px;
+}
+
+.footer-text {
+	margin-top: 1.3rem;
+	margin-left: 32rem;
+	text-align: center;
+	font-family: Inter;
+	font-size: 15px;
+	word-spacing: 1px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 28.5px;
+	color: #999;
+}
+
+.hitex{
+	padding-left: 30px;
+}
