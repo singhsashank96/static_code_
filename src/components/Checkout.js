@@ -19,8 +19,15 @@ function Checkout() {
         diamondTable: 85000,
     };
 
-   
  
+
+
+    const navigate = useNavigate();
+
+    const sendAmount=(e)=>{
+        e.preventDefault();
+      
+    }
 
     return (
         <body>
@@ -44,8 +51,10 @@ function Checkout() {
            <p style={{marginTop:'-40px'}}>HITEX Exhibition Center   •   July 22 | 5PM</p>
          </div>
        </nav>
-       <section className={styles.body}>
-                <div className={styles.ticketContainer}>
+       <section >
+        <div style={{marginTop:'30px'}}>
+        <div  class={styles.checkOutConitainer}>
+        <div className={styles.ticketContainer}>
                     <div className={`${styles.ContainerTicket} ${styles.silver}`}>
                         <div className={styles.ticketHeader}>
                             <div>  <h2>PHASE 1-SILVER</h2></div>
@@ -179,26 +188,22 @@ function Checkout() {
 
                 </div>
                 <div className={styles.total}>
-                            <span className={styles.finalhead}>Total</span>
-                            <span className={styles.finalprice} >Rs. 0000</span>
-                          
-                           
-                        </div>
-                       
+            <span className={styles.finalhead}  style={{color: "#000" , fontFamily: "Inter" ,  fontSize: "20px" ,  fontWeight: "600"}}>Total</span>   
+            <span className={styles.finalprice}  style={{float:'right' , color: "#000" , fontFamily: "Inter" ,  fontSize: "20px" ,  fontWeight: "600"}}>Rs.0000</span>  
+         </div>
+     
+         <div className={`${styles.checkoutBtn} ${styles.check_new}`}>
 
-                <div className=''>
-              
-                <div>
-            
-                    <div className={styles.checkoutBtn}>
-                        <a href="./finalpage.html" className={styles.disabled}>
-                            Checkout
-                        </a>
-                    </div>
-                
-                </div>
-                </div>
+         <a   style={{position:'initial'}} href="./finalpage.html"  className={styles.disabled}  >Checkout</a>
+      </div>
+
+         
+        
+        </div>
+        </div>
+       
                
+              
               
               
 

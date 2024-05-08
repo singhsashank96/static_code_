@@ -14,6 +14,7 @@ import { Suspense, lazy } from 'react';
               <Route path='/' element={<Index />} />
               <Route path='/checkout' element={<Checkout />} />
               <Route path='/finalpage' element={<Finalpage />} />
+              
             </Routes>
           </Suspense>
         </BrowserRouter>

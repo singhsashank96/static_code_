@@ -115,38 +115,40 @@ function Index() {
   
     return (
         <body>
-        <div class="head" id="forback">
-        
-        <img src="assets/logos/logo.png" alt="Company Logo" class="logo" />
-        <nav class="navi">
-          <ul>
-            <li class="up"><NavLink class="ups" to="/">Home</NavLink></li>
-            
-            <li class="up" onClick={handleScrollToAbout}><a     >About</a></li>
-            <li class="up"   onClick={handleScrollToSpeaker}><a   >Speakers</a></li>
-            <li class="up"  onClick={handleScrollToscedule} ><a href="#schedule">Schedule</a></li>
-            <li class="up" onClick={handleScrollTosponser}><a href="#spon">Sponsors</a></li>
-            <li class="up"><a href="#infor">Info</a></li>
-          </ul>
+         <div class="head" id="forback">
+     
     
-        
-        </nav>
-        <br />
-        <br />
-        <br />
+     <img src="assets/logos/logo.png" alt="Company Logo" class="logo" />
+     <nav class="navi">
+       <ul>
+         <li class="up"><a class="ups" href="#home">Home</a></li>
+         <li class="up"><a href="#about">About</a></li>
+         <li class="up"><a href="#speak">Speakers</a></li>
+         <li class="up"><a href="#schedule">Schedule</a></li>
+         <li class="up"><a href="#spon">Sponsors</a></li>
+         <li class="up"><a href="#infor">Info</a></li>
+       </ul>
+ 
+     
+     </nav>
+     <br/>
+     <br/>
+     <br/>
+ 
+     <div class="women">
     
-        <div class="women">
-       
-        <h1 class="title khand-semibold">WOMEN <span class="lobster-regular of">  of </span> <br /> <span class="tech">TECH PRESENT:</span> </h1>
-      </div>
-        <h1 class="title khand-regular inspire" id="inspire">THE INSPIRE SUMMIT</h1>
-        <br />
-        <p class="info">Date: <span id="date"> </span> | Location: <span id="location"></span></p>
-        <br />
-        
-        <Link to="/checkout"target="blank" class="btn">Get Ticket</Link>
-    
-       </div>
+     <h1 class="title khand-semibold">WOMEN <span class="lobster-regular of">  of </span> <br/> <span class="tech">TECH PRESENT:</span> </h1>
+   </div>
+     <h1 class="title khand-regular inspire" id="inspire">THE INSPIRE SUMMIT</h1>
+     <br/>
+     <p class="info">Date:2024/05/10 <span id="date"> </span> | Location: <span id="location">New York City</span></p>
+     <br/>
+     
+     <div class="banner_main_btn">
+       <Link to="/checkout"target="blank" class="btn">Get Ticket</Link>
+     </div>
+ 
+    </div>
     
     
        <div id="about" ref={aboutRef}>
@@ -184,7 +186,7 @@ function Index() {
 
   {speakersData.map((speaker) => (
    
-    <div class="flexbox">
+    <div class="flexbox" >
     <div class="flipper">
       <div class="front">
         <img id="social-media-icon"  src={speaker.image}  alt="Image 1" class="image" />
@@ -207,7 +209,7 @@ function Index() {
   </div>
 </section>
 
-    
+
     
     
     
@@ -271,25 +273,22 @@ function Index() {
     </div>
     
     
+    <section class="sponsors" id="spon"  ref={spnserRef}>
+    <br/>
+    <p class="interaa" >04</p>
+    <br/>
+    <p class="interaa">Sponsors</p>
+    <ul class="sponsor-logos home_sponser">
+        <li><img src="assets/logos/l1.png" alt="Sponsor 1" /></li>
+        <li><img src="assets/logos/l2.png" alt="Sponsor 1" /></li>
+        <li><img src="assets/logos/l3.png" alt="Sponsor 1" /></li>
+        <li><img src="assets/logos/l4.png" alt="Sponsor 1" /></li>
+        <li><img src="assets/logos/l5.png" alt="Sponsor 1" /></li>
+    </ul>
+</section>
     
     
-    
-    
-      <section class="sponsors" id="spon"  ref={spnserRef}>
-        <br/>
-        <p class="interaa" >04</p>
-        <br/>
-        <p class="interaa">Sponsors</p>
-        <ul class="sponsor-logos">
-            <li><img src="assets/logos/l1.png" alt="Sponsor 1" /></li>
-            <li><img src="assets/logos/l2.png" alt="Sponsor 1" /></li>
-            <li><img src="assets/logos/l3.png" alt="Sponsor 1" /></li>
-            <li><img src="assets/logos/l4.png" alt="Sponsor 1" /></li>
-            <li><img src="assets/logos/l5.png" alt="Sponsor 1" /></li>
-            
-            
-            </ul>
-    </section>
+ 
     
     
     
@@ -328,7 +327,48 @@ function Index() {
     
     </div>
     {/* <script src="script.js"></script> */}
-  
+    <React.Fragment>
+     
+      <BootstrapDialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+        style={{width:'60%'}}
+      >
+        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+        </DialogTitle>
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <DialogContent >
+       <div>
+        <div style={{marginTop:'20px' }}>
+            <div  className='sociel_icon_box'>
+                <div><img src='images/Facebook.png' /></div>
+                <div><img src='images/twitter.png' />
+                </div>            
+                    <div ><img src='images/print.png' className='print_img' /></div>
+                    <div><img src='images/tumblr1.png' /> </div>
+
+            </div>
+            <div className='model_input'>
+                 <input   value={url}  /> <button><AiFillCopy/></button>
+            </div>
+        </div>
+       </div>
+        </DialogContent>
+    
+      </BootstrapDialog>
+    </React.Fragment>
     
     </body>
     )
