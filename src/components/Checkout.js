@@ -18,8 +18,14 @@ function Checkout() {
         goldTable: 50000,
         diamondTable: 85000,
     };
+const [btn , setBtn] = useState(false);
+    const handleselectc = (ticketType, quantity) => {
+        console.log(`Selected quantity for ${ticketType}: ${quantity}`);
+          if(quantity>0){
+            setBtn(true);
+          }
 
- 
+    }
 
 
     const navigate = useNavigate();
@@ -64,6 +70,7 @@ function Checkout() {
                             <select
                                 name="tickets"
                                 className={styles.numberoftickets}
+                                onChange={(e) => handleselectc('silver', e.target.value)}
                             >
                                 {[0, 1, 2, 3, 4, 5].map((quantity) => (
                                     <option key={quantity} value={quantity}>
@@ -89,6 +96,7 @@ function Checkout() {
                      <select
                                 name="tickets"
                                 className={styles.numberoftickets}
+                                onChange={(e) => handleselectc('gold', e.target.value)}
                             >
                                 {[0, 1, 2, 3, 4, 5].map((quantity) => (
                                     <option key={quantity} value={quantity}>
@@ -116,6 +124,7 @@ function Checkout() {
                  
 
 <select
+                                onChange={(e) => handleselectc('fanpit', e.target.value)}
                                 name="tickets"
                                 className={styles.numberoftickets}
                             >
@@ -146,6 +155,7 @@ function Checkout() {
                             <span class={styles.price}>Rs. 50000</span>
                      <span class={styles.multiplication}>x</span>
                      <select
+                     onChange={handleselectc}
                                 name="tickets"
                                 className={styles.numberoftickets}
                             >
@@ -171,6 +181,8 @@ function Checkout() {
                      <span class={styles.price}>Rs. 85000</span>
                      <span class={styles.multiplication}>x</span>
                      <select
+             onChange={(e) => handleselectc('diamond', e.target.value)}
+
                                 name="tickets"
                                 className={styles.numberoftickets}
                             >
@@ -191,11 +203,19 @@ function Checkout() {
             <span className={styles.finalhead}  style={{color: "#000" , fontFamily: "Inter" ,  fontSize: "20px" ,  fontWeight: "600"}}>Total</span>   
             <span className={styles.finalprice}  style={{float:'right' , color: "#000" , fontFamily: "Inter" ,  fontSize: "20px" ,  fontWeight: "600"}}>Rs.0000</span>  
          </div>
-     
-         <div className={`${styles.checkoutBtn} ${styles.check_new}`}>
+     {
+        btn ? 
+        <div className={`${styles.checkoutBtn} ${styles.check_new}`}>
 
-         <a   style={{position:'initial'}} href="./finalpage.html"  className={styles.disabled}  >Checkout</a>
-      </div>
+        <Link   style={{position:'initial'}} to="/finalpage"    >Checkout</Link>
+     </div>
+     :
+     <div className={`${styles.checkoutBtn} ${styles.check_new}`}>
+
+     <a   style={{position:'initial'}} href="./finalpage.html"  className={styles.disabled}  >Checkout</a>
+  </div>
+     }
+        
 
          
         
